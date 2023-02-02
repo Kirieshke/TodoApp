@@ -47,6 +47,7 @@ namespace TodoApp.Controllers
 
             return View(await movies.ToListAsync());    
         }
+        
         public async Task<IActionResult> GetTasks(int id)
         {
             var appDbContext = _context.Tasks.Include(p=>p.Project).Where(p=>p.ProjectId == id);
@@ -95,13 +96,11 @@ namespace TodoApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Time,Deadline,IsDone,ProjectId")] Domain.Task task)
         {
-     
-                _context.Add(task);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            
-            ViewData["ProjectId"] = new SelectList(_context.Projects, "Id", "Name", task.Id);
-            return View(task);
+          
+                    _context.Add(task);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+
         }
 
         // GET: Tasks/Edit/5

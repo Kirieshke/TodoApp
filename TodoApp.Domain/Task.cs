@@ -51,6 +51,14 @@ namespace TodoApp.Domain
             File.AppendAllText(filename, clientDetails);
 
         }
+        public string ChangeColor()
+        {
+             if(DateTime.Now > Deadline)
+             {
+                return "#D03B2E";
+             }
+             return "#D0D0D0";
+        }
     }
 }
 

@@ -8,11 +8,12 @@
 <p></p>
 @foreach (var item in Model) {
 
-    <div class="list-group">
-  <a href="#" style="background: #202020; border-top:none; border-left:none; border-right:none; border-bottom: 1px solid #D0D0D0; padding: 0 20px"; class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">@Html.DisplayFor(modelItem => item.Name)</h5>
-      <small>  @Html.DisplayFor(modelItem => item.Deadline)</small>
+
+<div id="list-group">
+  <a href="#" style="background: #202020; border-top:none; border-left:none; border-right:none; border-bottom: 1px solid @item.ChangeColor(); padding: 0 20px"; class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between" style="color:@item.ChangeColor()">
+      <h5 class="mb-1" style="color:@item.ChangeColor()">@Html.DisplayFor(modelItem => item.Name)</h5>
+      <small id="deadline-status">  @Html.DisplayFor(modelItem => item.Deadline)</small>
     </div>
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small>
