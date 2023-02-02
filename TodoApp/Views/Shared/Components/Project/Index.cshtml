@@ -1,0 +1,13 @@
+﻿@model IEnumerable<TodoApp.Domain.Project>  
+
+
+
+<ul>  
+    @foreach(var item in Model)  
+    {  
+        <a class="middle-title-projects" asp-controller="Tasks" asp-action="GetTasks" asp-route-id="@item?.Id">@item.Name</a><p></p>
+    }  
+    <a class="create_project" asp-controller="Projects" asp-action="Create">
+        Add project
+    </a>
+</ul>  

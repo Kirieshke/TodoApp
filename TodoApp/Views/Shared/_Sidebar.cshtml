@@ -1,0 +1,25 @@
+﻿<ejs-sidebar id="default-sidebar" width="15%" style="background:#242424; text-align: center;">
+    <e-content-template>
+        <div class="title-head">
+            <div style="display:inline-block;"> Todoshechka </div>
+        </div>
+        
+        <div class="types-of-task" style="padding-top:15%">
+            <ul class="type-of-task-list">
+                
+                    <a asp-action="Index">Inbox</a><p></p>
+                    
+                    <a asp-controller="Tasks" asp-action="GetTodayTasks">Today</a><p></p>
+
+                    <a asp-controller="Tasks" asp-action="GetUpcomingTasks">Upcoming</a><p></p>
+               
+            </ul>
+        </div>
+        <div class="main-middle-title-projects" style="padding-top:45%;">
+            <a><h1>Projects</h1></a>
+            <div class="middle-title-projcts" style="padding-top:15%";>
+                 @await Component.InvokeAsync("Project")   
+            </div>
+        </div>
+    </e-content-template>
+</ejs-sidebar>

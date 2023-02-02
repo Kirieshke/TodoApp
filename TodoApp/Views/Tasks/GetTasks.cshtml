@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TodoApp.Domain.Task>
+
+@{
+    ViewData["Title"] = "GetTasks";
+}
+
+<h1>GetTasks</h1>
+
+<p>
+</p>
+@foreach (var item in Model) {
+
+    <div class="list-group">
+  <a href="#"style="background: #202020;" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">@Html.DisplayFor(modelItem => item.Name)</h5>
+      <small>  @Html.DisplayFor(modelItem => item.Deadline)</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small>@Html.DisplayFor(modelItem => item.Project.Name)</small>
+    <h5 style="font-weight: bold;"> Is done?  @Html.CheckBoxFor(m => item.IsDone, new {  @class="MyCheckBox", @onclick="opennewwindow("+@item.Id+", false);" }) </h5>
+    <script>  
+    function activeClick(cb) {  
+      @item.IsDone = cb.checked;  
+     }  
+</script>  
+  </a>
+</div>
+}
+    <a asp-action="Create" style="background: #D03B2E; color: #FEFFFF">Add new task</a>
+
+<p>
+<script type="text/javascript">
+    function opennewwindow(id, bool) {
+        var retVal = confirm("You can't cancel this action. Are you sure?");
+            if (retVal == true) {
+                window.location.href = '@Url.Action("Delete")?id=' + id
+            } 
+            else {
+                document.location.reload(true)
+            }
+    }
+</script>
