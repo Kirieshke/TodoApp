@@ -12,10 +12,12 @@ using System.Text.Json.Serialization;
 using System.IO;
 using Newtonsoft.Json;
 using TodoApp.BusinessLogic;
-using Magnum.FileSystem;
 using System.ComponentModel;
 using OfficeOpenXml;
-
+using FluentEmail.Smtp;
+using FluentEmail.Core;
+using MimeKit;
+using MailKit.Net.Smtp;
 namespace TodoApp.Controllers
 {
     public class TasksController : Controller
@@ -27,6 +29,7 @@ namespace TodoApp.Controllers
         public TasksController(AppDbContext context)
         {
             _context = context;
+            
         }
 
         // GET: Tasks
@@ -44,10 +47,32 @@ namespace TodoApp.Controllers
             {
                 movies = movies.Where(s => s.Name!.Contains(searchString));
             }
+            if (movies.FirstOrDefault(p=>p.Deadline.Date == DateTime.Today) != null)
+            {
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress("wwewe", "viktor.pomazan@nure.ua"));
+                message.To.Add(new MailboxAddress("vitya", "vitya.pomazan2001@gmail.com"));
+                message.Subject = "teet";
+                message.Body = new TextPart("plain")
+                {
+                    Text = "Is deadline for making task, please, hurry up, brah"
+                };
+                using (var client = new SmtpClient())
+                {
+                    client.Connect("smtp.gmail.com", 587, false);
+                    client.Authenticate("viktor.pomazan@nure.ua", "pinrlqtxbjfjlzjc");
 
+                    client.Send(message);
+                    client.Disconnect(true);
+                }
+
+            }
             return View(await movies.ToListAsync());    
         }
-        
+        public async void SendMailNotification()
+        {
+            
+        }
         public async Task<IActionResult> GetTasks(int id)
         {
             var appDbContext = _context.Tasks.Include(p=>p.Project).Where(p=>p.ProjectId == id);
@@ -81,7 +106,6 @@ namespace TodoApp.Controllers
 
             return View(task);
         }
-
         // GET: Tasks/Create
         public IActionResult Create()
         {

@@ -1,4 +1,6 @@
 ﻿using GemBox.Spreadsheet;
+using MailKit.Net.Smtp;
+using MimeKit;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -59,6 +61,7 @@ namespace TodoApp.Domain
              }
              return "#D0D0D0";
         }
+        
     }
 }
 

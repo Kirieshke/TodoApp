@@ -324,7 +324,6 @@ E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\EPPlus.System.Drawing.dll
 E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\GemBox.Spreadsheet.dll
 E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\HarfBuzzSharp.dll
 E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\Humanizer.dll
-E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\Magnum.dll
 E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\MessagePack.dll
 E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\MessagePack.Annotations.dll
 E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
@@ -596,3 +595,8 @@ E:\C# Proj\TodoApp\TodoApp\obj\Debug\net6.0\TodoApp.csproj.CopyComplete
 E:\C# Proj\TodoApp\TodoApp\obj\Debug\net6.0\TodoApp.genruntimeconfig.cache
 E:\C# Proj\TodoApp\TodoApp\obj\Debug\net6.0\ref\TodoApp.dll
 E:\C# Proj\TodoApp\TodoApp\obj\Debug\net6.0\TodoApp.MvcApplicationPartsAssemblyInfo.cs
+E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\FluentEmail.Core.dll
+E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\FluentEmail.Smtp.dll
+E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\MailKit.dll
+E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\MimeKit.dll
+E:\C# Proj\TodoApp\TodoApp\bin\Debug\net6.0\NETCore.MailKit.dll
