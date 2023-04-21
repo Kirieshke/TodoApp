@@ -1,0 +1,16 @@
+E:\C# Proj\TodoApp\TodoApp.Desktop\bin\Debug\TodoApp.Desktop.exe.config
+E:\C# Proj\TodoApp\TodoApp.Desktop\bin\Debug\TodoApp.Desktop.exe
+E:\C# Proj\TodoApp\TodoApp.Desktop\bin\Debug\TodoApp.Desktop.pdb
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.csproj.AssemblyReference.cache
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.csproj.SuggestedBindingRedirects.cache
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\MainWindow.g.cs
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\App.g.cs
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop_MarkupCompile.cache
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop_MarkupCompile.lref
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\MainWindow.baml
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.g.resources
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.Properties.Resources.resources
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.csproj.GenerateResource.cache
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.csproj.CoreCompileInputs.cache
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.exe
+E:\C# Proj\TodoApp\TodoApp.Desktop\obj\Debug\TodoApp.Desktop.pdb

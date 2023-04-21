@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TodoApp.Models;
-using TodoApp.Domain;
+using TodoApp.Core;
+using TodoApp.Core.Entity;
 
 namespace TodoApp.Controllers
 {
@@ -41,7 +41,7 @@ namespace TodoApp.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Domain.Project project)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Project project)
         {
             if(ModelState.IsValid)
             {

@@ -8,8 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "TodoApp/1.0.0": {
         "dependencies": {
+          "Chart.js": "3.7.1",
           "EPPlus": "6.1.2",
           "FluentEmail.Smtp": "3.0.2",
+          "Google.Apis.Calendar.v3": "1.60.0.3004",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.11",
           "Microsoft.CodeAnalysis.Razor": "6.0.13",
           "Microsoft.EntityFrameworkCore": "6.0.12",
@@ -21,14 +23,14 @@
           "MimeKit": "3.5.0",
           "NETCore.MailKit": "2.1.0",
           "Syncfusion.EJ2.AspNet.Core": "20.4.0.43",
-          "TodoApp.BusinessLogic": "1.0.0",
           "TodoApp.Domain": "1.0.0",
-          "TodoApp.Infrastructure": "1.0.0"
+          "XPlot.GoogleCharts": "3.0.1"
         },
         "runtime": {
           "TodoApp.dll": {}
         }
       },
+      "Chart.js/3.7.1": {},
       "DocumentFormat.OpenXml/2.19.0": {
         "dependencies": {
           "System.IO.Packaging": "4.7.0"
@@ -98,6 +100,58 @@
           }
         }
       },
+      "FSharp.Core/4.5.2": {
+        "runtime": {
+          "lib/netstandard1.6/FSharp.Core.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "2018.7.27.2"
+          }
+        },
+        "resources": {
+          "lib/netstandard1.6/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.6/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.6/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/netstandard1.6/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.6/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.6/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.6/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.6/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.6/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.6/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.6/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.6/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.6/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "GemBox.Spreadsheet/49.0.1225": {
         "dependencies": {
           "HarfBuzzSharp": "2.8.2",
@@ -109,6 +163,64 @@
           "lib/netstandard2.0/GemBox.Spreadsheet.dll": {
             "assemblyVersion": "49.0.0.1225",
             "fileVersion": "49.0.200.1225"
+          }
+        }
+      },
+      "Google.Apis/1.60.0": {
+        "dependencies": {
+          "Google.Apis.Core": "1.60.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.0.0"
+          }
+        }
+      },
+      "Google.Apis.Auth/1.60.0": {
+        "dependencies": {
+          "Google.Apis": "1.60.0",
+          "Google.Apis.Core": "1.60.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.0.0"
+          },
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.0.0"
+          }
+        }
+      },
+      "Google.Apis.Calendar.v3/1.60.0.3004": {
+        "dependencies": {
+          "Google.Apis": "1.60.0",
+          "Google.Apis.Auth": "1.60.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Calendar.v3.dll": {
+            "assemblyVersion": "1.60.0.3004",
+            "fileVersion": "1.60.0.3004"
+          }
+        }
+      },
+      "Google.Apis.Core/1.60.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.0.0"
+          }
+        }
+      },
+      "Google.DataTable.Net.Wrapper/4.0.0": {
+        "runtime": {
+          "lib/netcoreapp2.1/Google.DataTable.Net.Wrapper.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -2586,24 +2698,27 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "TodoApp.BusinessLogic/1.0.0": {
+      "XPlot.GoogleCharts/3.0.1": {
         "dependencies": {
-          "FluentEmail.Smtp": "3.0.2",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.11",
-          "MimeKit": "3.5.0",
-          "NETCore.MailKit": "2.1.0",
-          "TodoApp.Domain": "1.0.0",
-          "TodoApp.Infrastructure": "1.0.0"
+          "FSharp.Core": "4.5.2",
+          "Google.DataTable.Net.Wrapper": "4.0.0",
+          "Newtonsoft.Json": "13.0.2"
         },
         "runtime": {
-          "TodoApp.BusinessLogic.dll": {}
+          "lib/netstandard2.0/XPlot.GoogleCharts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
         }
       },
       "TodoApp.Domain/1.0.0": {
         "dependencies": {
+          "Chart.js": "3.7.1",
           "DocumentFormat.OpenXml": "2.19.0",
           "FluentEmail.Smtp": "3.0.2",
           "GemBox.Spreadsheet": "49.0.1225",
+          "Google.Apis.Auth": "1.60.0",
+          "Google.Apis.Calendar.v3": "1.60.0.3004",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.11",
           "Microsoft.CodeAnalysis.Razor": "6.0.13",
           "Microsoft.EntityFrameworkCore": "6.0.12",
@@ -2616,25 +2731,6 @@
         "runtime": {
           "TodoApp.Domain.dll": {}
         }
-      },
-      "TodoApp.Infrastructure/1.0.0": {
-        "dependencies": {
-          "FluentEmail.Smtp": "3.0.2",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.11",
-          "Microsoft.CodeAnalysis.Razor": "6.0.13",
-          "Microsoft.EntityFrameworkCore": "6.0.12",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.12",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.12",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "6.0.11",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.11",
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "6.0.11",
-          "MimeKit": "3.5.0",
-          "NETCore.MailKit": "2.1.0",
-          "TodoApp.Domain": "1.0.0"
-        },
-        "runtime": {
-          "TodoApp.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -2643,6 +2739,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Chart.js/3.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gJunTMEueTNdA5Hp92J9sv363msSemW+GSy1VtbrwjxCaMrp+/mgB20EdVezbP34dbM+h+A8G5XbEuL6tOJoCw==",
+      "path": "chart.js/3.7.1",
+      "hashPath": "chart.js.3.7.1.nupkg.sha512"
     },
     "DocumentFormat.OpenXml/2.19.0": {
       "type": "package",
@@ -2686,12 +2789,54 @@
       "path": "fluentemail.smtp/3.0.2",
       "hashPath": "fluentemail.smtp.3.0.2.nupkg.sha512"
     },
+    "FSharp.Core/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-apbdQOjzsjQ637kTWQuW29jqwY18jsHMyNC5A+TPJZKFEIE2cIfQWf3V7+mXrxlbX69BueYkv293/g70wuXuRw==",
+      "path": "fsharp.core/4.5.2",
+      "hashPath": "fsharp.core.4.5.2.nupkg.sha512"
+    },
     "GemBox.Spreadsheet/49.0.1225": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-BiMwpvW+uUnu0cVAkh00cRNbhI6yNP6uaN9205Q5iLvfj6raNWncZ+0QiYL4AeL8AJgozDuYBSnXEKQHcgnNtQ==",
       "path": "gembox.spreadsheet/49.0.1225",
       "hashPath": "gembox.spreadsheet.49.0.1225.nupkg.sha512"
+    },
+    "Google.Apis/1.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T8ojAsKlsMkt5nZhTQuocqHYzm/knVm8o2/JMm4louEjaKzT4x0FihoCIxCYSTRGWkYC27LPWspyG4p76+bMzA==",
+      "path": "google.apis/1.60.0",
+      "hashPath": "google.apis.1.60.0.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AUuWniIf2muns/9hesiF7yCKeQN+PbdTU864Rb2wDzW4xmepO6tEnoqREPeow95qIAgkOlL/byKeU65d3ox5Ng==",
+      "path": "google.apis.auth/1.60.0",
+      "hashPath": "google.apis.auth.1.60.0.nupkg.sha512"
+    },
+    "Google.Apis.Calendar.v3/1.60.0.3004": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wmHl9fRjFd5toeNlYz/tSf3BZghbGVaIaosoM+C6bHZEbRppA5JFsBVse8gaVM4TJ+vNUpS+1LJnDCd2mS1Xcw==",
+      "path": "google.apis.calendar.v3/1.60.0.3004",
+      "hashPath": "google.apis.calendar.v3.1.60.0.3004.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.60.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NOkjqMQblYEZXt2OEgshWayveYW11Pi+Uz0I30Kzl9BvL4TZLJzMqtiu1EdV8XkyyjGuAUgANdi4BOqRDlbVEw==",
+      "path": "google.apis.core/1.60.0",
+      "hashPath": "google.apis.core.1.60.0.nupkg.sha512"
+    },
+    "Google.DataTable.Net.Wrapper/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rSwTkXozXMqda93fkRpYE9I8vOhm/fzZf2Vww/NGU1ZzjAtiDW0BkaSicPjWVwBbpcp5573I3n1gSmmJJDVzkQ==",
+      "path": "google.datatable.net.wrapper/4.0.0",
+      "hashPath": "google.datatable.net.wrapper.4.0.0.nupkg.sha512"
     },
     "HarfBuzzSharp/2.8.2": {
       "type": "package",
@@ -4044,17 +4189,14 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "TodoApp.BusinessLogic/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
+    "XPlot.GoogleCharts/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NYyPMLKqk3hM59T2hsDGAmBGLOH4ouLNU+UMEAu7vWFfxjA/XKACr/ttvsKoVnfPBWG7t91H6K0wgzbGEoKq1g==",
+      "path": "xplot.googlecharts/3.0.1",
+      "hashPath": "xplot.googlecharts.3.0.1.nupkg.sha512"
     },
     "TodoApp.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TodoApp.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

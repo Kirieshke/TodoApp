@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TodoApp.Domain;
-using TodoApp.Models;
+using TodoApp.Core.Entity;
 
 namespace TodoApp.ViewComponents
 {

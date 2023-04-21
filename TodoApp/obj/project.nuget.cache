@@ -1,16 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "Z5IpfTMJ3q6BLOmDsrgyeLZuU4uZ9iDWqS01pK6/jl6s5S5eCoPFUzy1dIwveLTZbPWROicNZgTfecHfbqYBuw==",
+  "dgSpecHash": "QlLeefLfRqL2rjMmmrNkB2yQpyqNJ7srCJxHhMDjlTtwVhaqJXbje7uooaPEVYNOMNtX1NVCj6MI19tF+QRSQg==",
   "success": true,
-  "projectFilePath": "E:\\C# Proj\\TodoApp\\TodoApp\\TodoApp.csproj",
+  "projectFilePath": "E:\\C# Proj\\TodoApp\\TodoApp\\TodoApp.Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vitya\\.nuget\\packages\\chart.js\\3.7.1\\chart.js.3.7.1.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\documentformat.openxml\\2.19.0\\documentformat.openxml.2.19.0.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\epplus\\6.1.2\\epplus.6.1.2.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\fluentemail.core\\3.0.2\\fluentemail.core.3.0.2.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\fluentemail.smtp\\3.0.2\\fluentemail.smtp.3.0.2.nupkg.sha512",
+    "C:\\Users\\vitya\\.nuget\\packages\\fsharp.core\\4.5.2\\fsharp.core.4.5.2.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\gembox.spreadsheet\\49.0.1225\\gembox.spreadsheet.49.0.1225.nupkg.sha512",
+    "C:\\Users\\vitya\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\vitya\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\vitya\\.nuget\\packages\\google.apis.calendar.v3\\1.60.0.3004\\google.apis.calendar.v3.1.60.0.3004.nupkg.sha512",
+    "C:\\Users\\vitya\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\vitya\\.nuget\\packages\\google.datatable.net.wrapper\\4.0.0\\google.datatable.net.wrapper.4.0.0.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\harfbuzzsharp\\2.8.2\\harfbuzzsharp.2.8.2.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\2.8.2\\harfbuzzsharp.nativeassets.macos.2.8.2.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\2.8.2\\harfbuzzsharp.nativeassets.win32.2.8.2.nupkg.sha512",
@@ -203,7 +210,8 @@
     "C:\\Users\\vitya\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\vitya\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\vitya\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\vitya\\.nuget\\packages\\xplot.googlecharts\\3.0.1\\xplot.googlecharts.3.0.1.nupkg.sha512"
   ],
   "logs": []
 }

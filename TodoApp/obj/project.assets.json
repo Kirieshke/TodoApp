@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Chart.js/3.7.1": {
+        "type": "package"
+      },
       "DocumentFormat.OpenXml/2.19.0": {
         "type": "package",
         "dependencies": {
@@ -77,6 +80,59 @@
           "lib/netstandard2.0/FluentEmail.Smtp.dll": {}
         }
       },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.6/FSharp.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/FSharp.Core.dll": {}
+        },
+        "resource": {
+          "lib/netstandard1.6/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.6/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.6/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/netstandard1.6/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.6/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.6/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.6/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.6/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.6/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.6/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.6/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.6/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.6/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "GemBox.Spreadsheet/49.0.1225": {
         "type": "package",
         "dependencies": {
@@ -90,6 +146,67 @@
         },
         "runtime": {
           "lib/netstandard2.0/GemBox.Spreadsheet.dll": {}
+        }
+      },
+      "Google.Apis/1.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.60.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.60.0",
+          "Google.Apis.Core": "1.60.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Calendar.v3/1.60.0.3004": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.60.0",
+          "Google.Apis.Auth": "1.60.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Calendar.v3.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Calendar.v3.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
+      "Google.DataTable.Net.Wrapper/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/Google.DataTable.Net.Wrapper.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Google.DataTable.Net.Wrapper.dll": {}
         }
       },
       "HarfBuzzSharp/2.8.2": {
@@ -3505,31 +3622,30 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "TodoApp.BusinessLogic/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+      "XPlot.GoogleCharts/3.0.1": {
+        "type": "package",
         "dependencies": {
-          "FluentEmail.Smtp": "3.0.2",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.11",
-          "MimeKit": "3.5.0",
-          "NETCore.MailKit": "2.1.0",
-          "TodoApp.Domain": "1.0.0",
-          "TodoApp.Infrastructure": "1.0.0"
+          "FSharp.Core": "4.5.2",
+          "Google.DataTable.Net.Wrapper": "4.0.0",
+          "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
-          "bin/placeholder/TodoApp.BusinessLogic.dll": {}
+          "lib/netstandard2.0/XPlot.GoogleCharts.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TodoApp.BusinessLogic.dll": {}
+          "lib/netstandard2.0/XPlot.GoogleCharts.dll": {}
         }
       },
-      "TodoApp.Domain/1.0.0": {
+      "TodoApp.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Chart.js": "3.7.1",
           "DocumentFormat.OpenXml": "2.19.0",
           "FluentEmail.Smtp": "3.0.2",
           "GemBox.Spreadsheet": "49.0.1225",
+          "Google.Apis.Auth": "1.60.0",
+          "Google.Apis.Calendar.v3": "1.60.0.3004",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.11",
           "Microsoft.CodeAnalysis.Razor": "6.0.13",
           "Microsoft.EntityFrameworkCore": "6.0.12",
@@ -3540,39 +3656,28 @@
           "NETCore.MailKit": "2.1.0"
         },
         "compile": {
-          "bin/placeholder/TodoApp.Domain.dll": {}
+          "bin/placeholder/TodoApp.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TodoApp.Domain.dll": {}
-        }
-      },
-      "TodoApp.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "FluentEmail.Smtp": "3.0.2",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.11",
-          "Microsoft.CodeAnalysis.Razor": "6.0.13",
-          "Microsoft.EntityFrameworkCore": "6.0.12",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.12",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.12",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "6.0.11",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.11",
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "6.0.11",
-          "MimeKit": "3.5.0",
-          "NETCore.MailKit": "2.1.0",
-          "TodoApp.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/TodoApp.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TodoApp.Infrastructure.dll": {}
+          "bin/placeholder/TodoApp.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "Chart.js/3.7.1": {
+      "sha512": "gJunTMEueTNdA5Hp92J9sv363msSemW+GSy1VtbrwjxCaMrp+/mgB20EdVezbP34dbM+h+A8G5XbEuL6tOJoCw==",
+      "type": "package",
+      "path": "chart.js/3.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "chart.js.3.7.1.nupkg.sha512",
+        "chart.js.nuspec",
+        "content/Scripts/chart.js",
+        "content/Scripts/chart.min.js"
+      ]
+    },
     "DocumentFormat.OpenXml/2.19.0": {
       "sha512": "BLFqodowHZHR/A/sKU/6e+63J5ONWDdv8hEuSZOUiBfGFuVmsG9P3o+LMSq+dajNWE1q+lqVSa1H5FuhLX8/fA==",
       "type": "package",
@@ -3690,6 +3795,54 @@
         "lib/netstandard2.0/FluentEmail.Smtp.dll"
       ]
     },
+    "FSharp.Core/4.5.2": {
+      "sha512": "apbdQOjzsjQ637kTWQuW29jqwY18jsHMyNC5A+TPJZKFEIE2cIfQWf3V7+mXrxlbX69BueYkv293/g70wuXuRw==",
+      "type": "package",
+      "path": "fsharp.core/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.core.4.5.2.nupkg.sha512",
+        "fsharp.core.nuspec",
+        "lib/net45/FSharp.Core.dll",
+        "lib/net45/FSharp.Core.optdata",
+        "lib/net45/FSharp.Core.resources.dll",
+        "lib/net45/FSharp.Core.sigdata",
+        "lib/net45/FSharp.Core.xml",
+        "lib/net45/cs/FSharp.Core.resources.dll",
+        "lib/net45/de/FSharp.Core.resources.dll",
+        "lib/net45/en/FSharp.Core.resources.dll",
+        "lib/net45/es/FSharp.Core.resources.dll",
+        "lib/net45/fr/FSharp.Core.resources.dll",
+        "lib/net45/it/FSharp.Core.resources.dll",
+        "lib/net45/ja/FSharp.Core.resources.dll",
+        "lib/net45/ko/FSharp.Core.resources.dll",
+        "lib/net45/pl/FSharp.Core.resources.dll",
+        "lib/net45/pt-BR/FSharp.Core.resources.dll",
+        "lib/net45/ru/FSharp.Core.resources.dll",
+        "lib/net45/tr/FSharp.Core.resources.dll",
+        "lib/net45/zh-Hans/FSharp.Core.resources.dll",
+        "lib/net45/zh-Hant/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/FSharp.Core.dll",
+        "lib/netstandard1.6/FSharp.Core.optdata",
+        "lib/netstandard1.6/FSharp.Core.sigdata",
+        "lib/netstandard1.6/FSharp.Core.xml",
+        "lib/netstandard1.6/cs/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/de/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/en/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/es/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/fr/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/it/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ja/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ko/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/pl/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/pt-BR/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ru/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/tr/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/zh-Hans/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
     "GemBox.Spreadsheet/49.0.1225": {
       "sha512": "BiMwpvW+uUnu0cVAkh00cRNbhI6yNP6uaN9205Q5iLvfj6raNWncZ+0QiYL4AeL8AJgozDuYBSnXEKQHcgnNtQ==",
       "type": "package",
@@ -3718,6 +3871,121 @@
         "licenses/ThirdPartyCodeLicenses/PDFsharp and MigraDoc License.txt",
         "licenses/ThirdPartyCodeLicenses/SVG.NET License.txt",
         "licenses/ThirdPartyCodeLicenses/ZLIB.NET License.txt"
+      ]
+    },
+    "Google.Apis/1.60.0": {
+      "sha512": "T8ojAsKlsMkt5nZhTQuocqHYzm/knVm8o2/JMm4louEjaKzT4x0FihoCIxCYSTRGWkYC27LPWspyG4p76+bMzA==",
+      "type": "package",
+      "path": "google.apis/1.60.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.1.60.0.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Auth/1.60.0": {
+      "sha512": "AUuWniIf2muns/9hesiF7yCKeQN+PbdTU864Rb2wDzW4xmepO6tEnoqREPeow95qIAgkOlL/byKeU65d3ox5Ng==",
+      "type": "package",
+      "path": "google.apis.auth/1.60.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.auth.1.60.0.nupkg.sha512",
+        "google.apis.auth.nuspec",
+        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net45/Google.Apis.Auth.dll",
+        "lib/net45/Google.Apis.Auth.pdb",
+        "lib/net45/Google.Apis.Auth.xml",
+        "lib/net461/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net461/Google.Apis.Auth.dll",
+        "lib/net461/Google.Apis.Auth.pdb",
+        "lib/net461/Google.Apis.Auth.xml",
+        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.pdb",
+        "lib/netstandard1.3/Google.Apis.Auth.xml",
+        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.pdb",
+        "lib/netstandard2.0/Google.Apis.Auth.xml"
+      ]
+    },
+    "Google.Apis.Calendar.v3/1.60.0.3004": {
+      "sha512": "wmHl9fRjFd5toeNlYz/tSf3BZghbGVaIaosoM+C6bHZEbRppA5JFsBVse8gaVM4TJ+vNUpS+1LJnDCd2mS1Xcw==",
+      "type": "package",
+      "path": "google.apis.calendar.v3/1.60.0.3004",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.calendar.v3.1.60.0.3004.nupkg.sha512",
+        "google.apis.calendar.v3.nuspec",
+        "lib/net45/Google.Apis.Calendar.v3.dll",
+        "lib/net45/Google.Apis.Calendar.v3.pdb",
+        "lib/net45/Google.Apis.Calendar.v3.xml",
+        "lib/netstandard1.3/Google.Apis.Calendar.v3.dll",
+        "lib/netstandard1.3/Google.Apis.Calendar.v3.pdb",
+        "lib/netstandard1.3/Google.Apis.Calendar.v3.xml",
+        "lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
+        "lib/netstandard2.0/Google.Apis.Calendar.v3.pdb",
+        "lib/netstandard2.0/Google.Apis.Calendar.v3.xml"
+      ]
+    },
+    "Google.Apis.Core/1.60.0": {
+      "sha512": "NOkjqMQblYEZXt2OEgshWayveYW11Pi+Uz0I30Kzl9BvL4TZLJzMqtiu1EdV8XkyyjGuAUgANdi4BOqRDlbVEw==",
+      "type": "package",
+      "path": "google.apis.core/1.60.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.core.1.60.0.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
+    "Google.DataTable.Net.Wrapper/4.0.0": {
+      "sha512": "rSwTkXozXMqda93fkRpYE9I8vOhm/fzZf2Vww/NGU1ZzjAtiDW0BkaSicPjWVwBbpcp5573I3n1gSmmJJDVzkQ==",
+      "type": "package",
+      "path": "google.datatable.net.wrapper/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.datatable.net.wrapper.4.0.0.nupkg.sha512",
+        "google.datatable.net.wrapper.nuspec",
+        "lib/net40/Google.DataTable.Net.Wrapper.dll",
+        "lib/net45/Google.DataTable.Net.Wrapper.dll",
+        "lib/net452/Google.DataTable.Net.Wrapper.dll",
+        "lib/net46/Google.DataTable.Net.Wrapper.dll",
+        "lib/net461/Google.DataTable.Net.Wrapper.dll",
+        "lib/netcoreapp2.0/Google.DataTable.Net.Wrapper.dll",
+        "lib/netcoreapp2.1/Google.DataTable.Net.Wrapper.dll",
+        "lib/netstandard2.0/Google.DataTable.Net.Wrapper.dll"
       ]
     },
     "HarfBuzzSharp/2.8.2": {
@@ -10755,26 +11023,31 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "TodoApp.BusinessLogic/1.0.0": {
-      "type": "project",
-      "path": "../TodoApp.BusinessLogic/TodoApp.BusinessLogic.csproj",
-      "msbuildProject": "../TodoApp.BusinessLogic/TodoApp.BusinessLogic.csproj"
+    "XPlot.GoogleCharts/3.0.1": {
+      "sha512": "NYyPMLKqk3hM59T2hsDGAmBGLOH4ouLNU+UMEAu7vWFfxjA/XKACr/ttvsKoVnfPBWG7t91H6K0wgzbGEoKq1g==",
+      "type": "package",
+      "path": "xplot.googlecharts/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/XPlot.GoogleCharts.dll",
+        "lib/netstandard2.0/XPlot.GoogleCharts.xml",
+        "xplot.googlecharts.3.0.1.nupkg.sha512",
+        "xplot.googlecharts.nuspec"
+      ]
     },
-    "TodoApp.Domain/1.0.0": {
+    "TodoApp.Core/1.0.0": {
       "type": "project",
-      "path": "../TodoApp.Domain/TodoApp.Domain.csproj",
-      "msbuildProject": "../TodoApp.Domain/TodoApp.Domain.csproj"
-    },
-    "TodoApp.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../TodoApp.Infrastructure/TodoApp.Infrastructure.csproj",
-      "msbuildProject": "../TodoApp.Infrastructure/TodoApp.Infrastructure.csproj"
+      "path": "../TodoApp.Domain/TodoApp.Core.csproj",
+      "msbuildProject": "../TodoApp.Domain/TodoApp.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Chart.js >= 3.7.1",
       "EPPlus >= 6.1.2",
       "FluentEmail.Smtp >= 3.0.2",
+      "Google.Apis.Calendar.v3 >= 1.60.0.3004",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.11",
       "Microsoft.CodeAnalysis.Razor >= 6.0.13",
       "Microsoft.EntityFrameworkCore >= 6.0.12",
@@ -10786,9 +11059,8 @@
       "MimeKit >= 3.5.0",
       "NETCore.MailKit >= 2.1.0",
       "Syncfusion.EJ2.AspNet.Core >= 20.4.0.43",
-      "TodoApp.BusinessLogic >= 1.0.0",
-      "TodoApp.Domain >= 1.0.0",
-      "TodoApp.Infrastructure >= 1.0.0"
+      "TodoApp.Core >= 1.0.0",
+      "XPlot.GoogleCharts >= 3.0.1"
     ]
   },
   "packageFolders": {
@@ -10798,9 +11070,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C# Proj\\TodoApp\\TodoApp\\TodoApp.csproj",
-      "projectName": "TodoApp",
-      "projectPath": "E:\\C# Proj\\TodoApp\\TodoApp\\TodoApp.csproj",
+      "projectUniqueName": "E:\\C# Proj\\TodoApp\\TodoApp\\TodoApp.Web.csproj",
+      "projectName": "TodoApp.Web",
+      "projectPath": "E:\\C# Proj\\TodoApp\\TodoApp\\TodoApp.Web.csproj",
       "packagesPath": "C:\\Users\\vitya\\.nuget\\packages\\",
       "outputPath": "E:\\C# Proj\\TodoApp\\TodoApp\\obj\\",
       "projectStyle": "PackageReference",
@@ -10823,14 +11095,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\C# Proj\\TodoApp\\TodoApp.BusinessLogic\\TodoApp.BusinessLogic.csproj": {
-              "projectPath": "E:\\C# Proj\\TodoApp\\TodoApp.BusinessLogic\\TodoApp.BusinessLogic.csproj"
-            },
-            "E:\\C# Proj\\TodoApp\\TodoApp.Domain\\TodoApp.Domain.csproj": {
-              "projectPath": "E:\\C# Proj\\TodoApp\\TodoApp.Domain\\TodoApp.Domain.csproj"
-            },
-            "E:\\C# Proj\\TodoApp\\TodoApp.Infrastructure\\TodoApp.Infrastructure.csproj": {
-              "projectPath": "E:\\C# Proj\\TodoApp\\TodoApp.Infrastructure\\TodoApp.Infrastructure.csproj"
+            "E:\\C# Proj\\TodoApp\\TodoApp.Domain\\TodoApp.Core.csproj": {
+              "projectPath": "E:\\C# Proj\\TodoApp\\TodoApp.Domain\\TodoApp.Core.csproj"
             }
           }
         }
@@ -10845,6 +11111,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Chart.js": {
+            "target": "Package",
+            "version": "[3.7.1, )"
+          },
           "EPPlus": {
             "target": "Package",
             "version": "[6.1.2, )"
@@ -10852,6 +11122,10 @@
           "FluentEmail.Smtp": {
             "target": "Package",
             "version": "[3.0.2, )"
+          },
+          "Google.Apis.Calendar.v3": {
+            "target": "Package",
+            "version": "[1.60.0.3004, )"
           },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
@@ -10898,6 +11172,10 @@
           "Syncfusion.EJ2.AspNet.Core": {
             "target": "Package",
             "version": "[20.4.0.43, )"
+          },
+          "XPlot.GoogleCharts": {
+            "target": "Package",
+            "version": "[3.0.1, )"
           }
         },
         "imports": [

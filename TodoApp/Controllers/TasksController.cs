@@ -1,37 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TodoApp.Domain;
-using TodoApp.Models;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.IO;
-using Newtonsoft.Json;
-using TodoApp.BusinessLogic;
-using System.ComponentModel;
-using OfficeOpenXml;
-using FluentEmail.Smtp;
-using FluentEmail.Core;
-using MimeKit;
-using MailKit.Net.Smtp;
+using TodoApp.Core.Interfaces;
+
 namespace TodoApp.Controllers
 {
     public class TasksController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ITaskService _taskService;
         private readonly DateTime date = DateTime.Today;
         public string taskJsonFile = "Maded_Tasks.json";
         public string taskFile = "Maded_Tasks.csv";
-        public TasksController(AppDbContext context)
+        public bool b = false;
+        public TasksController(AppDbContext context, ITaskService taskService)
         {
             _context = context;
-            
+            _taskService = taskService;
         }
-
+       
         // GET: Tasks
         public async Task<IActionResult> Index(string searchString)
         {
@@ -47,36 +34,12 @@ namespace TodoApp.Controllers
             {
                 movies = movies.Where(s => s.Name!.Contains(searchString));
             }
-            if (movies.FirstOrDefault(p=>p.Deadline.Date == DateTime.Today) != null)
-            {
-                var message = new MimeMessage();
-                message.From.Add(new MailboxAddress("wwewe", "viktor.pomazan@nure.ua"));
-                message.To.Add(new MailboxAddress("vitya", "vitya.pomazan2001@gmail.com"));
-                message.Subject = "teet";
-                message.Body = new TextPart("plain")
-                {
-                    Text = "Is deadline for making task, please, hurry up, brah"
-                };
-                using (var client = new SmtpClient())
-                {
-                    client.Connect("smtp.gmail.com", 587, false);
-                    client.Authenticate("viktor.pomazan@nure.ua", "pinrlqtxbjfjlzjc");
-
-                    client.Send(message);
-                    client.Disconnect(true);
-                }
-
-            }
             return View(await movies.ToListAsync());    
-        }
-        public async void SendMailNotification()
-        {
-            
         }
         public async Task<IActionResult> GetTasks(int id)
         {
-            var appDbContext = _context.Tasks.Include(p=>p.Project).Where(p=>p.ProjectId == id);
-            return View(await appDbContext.ToListAsync());
+            var appDbContext = _taskService.GetTasks(id);
+            return View(appDbContext);
         }
         public async Task<IActionResult> GetTodayTasks()
         {
@@ -118,16 +81,14 @@ namespace TodoApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Time,Deadline,IsDone,ProjectId")] Domain.Task task)
+        public async Task<IActionResult> Create([Bind("Id,Name,Time,Deadline,IsDone,ProjectId")] Core.Entity.Task task)
         {
-          
-                    _context.Add(task);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-
+              _context.Add(task);
+              
+              await _context.SaveChangesAsync();
+              return RedirectToAction(nameof(Index));
         }
-
-        // GET: Tasks/Edit/5
+        
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Tasks == null)
@@ -149,7 +110,7 @@ namespace TodoApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Time,IsDone,ProjectId")] Domain.Task task)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Time,IsDone,ProjectId")] Core.Entity.Task task)
         {
             if (id != task.Id)
             {
