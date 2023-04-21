@@ -11,11 +11,11 @@ namespace TodoApp.Core.Interfaces
     {
         public List<Core.Entity.Task> Search(string searchString);
         public List<Core.Entity.Task> GetTasks(int id);
-        public Task<Core.Entity.Task> GetTodayTasks();
-        public Task<Core.Entity.Task> GetUpcomingTasks();
-        public Task<Core.Entity.Task> Details(int? id);
-        public Task<Core.Entity.Task> Add(Core.Entity.Task task);
-        public Task<Core.Entity.Task> Update(Core.Entity.Task task);
-        public Task<Core.Entity.Task> Delete(int? id);
+        public List<Entity.Task> GetTodayTasks();
+        public List<Entity.Task> GetUpcomingTasks();
+        public List<Entity.Task> Details(int? id);
+        public void Add(Core.Entity.Task task);
+        public void Update(Core.Entity.Task task);
+        public void Delete(int? id);
     }
 }

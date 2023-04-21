@@ -27,14 +27,8 @@ namespace TodoApp.Controllers
                 return Problem("Entity set 'MvcMovieContext.Movie'  is null.");
             }
 
-            var movies = from m in _context.Tasks
-                         select m;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                movies = movies.Where(s => s.Name!.Contains(searchString));
-            }
-            return View(await movies.ToListAsync());    
+            var task = _taskService.Search(searchString);
+            return View(task);    
         }
         public async Task<IActionResult> GetTasks(int id)
         {
@@ -43,15 +37,14 @@ namespace TodoApp.Controllers
         }
         public async Task<IActionResult> GetTodayTasks()
         {
-            var appDbContext = _context.Tasks.Include(t=>t.Project).Where(p => p.Deadline.Date == date);
-            return View(await appDbContext.ToListAsync());
+            var appDbContext = _taskService.GetTodayTasks();
+            return View(appDbContext);
         }
         public async Task<IActionResult> GetUpcomingTasks()
         {
             var appDbContext = _context.Tasks.Include(t => t.Project).Where(p => p.Deadline.Date >= date);
             return View(await appDbContext.ToListAsync());
         }
-        // GET: Tasks/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Tasks == null)
@@ -69,24 +62,18 @@ namespace TodoApp.Controllers
 
             return View(task);
         }
-        // GET: Tasks/Create
         public IActionResult Create()
         {
             ViewData["ProjectId"] = new SelectList(_context.Projects, "Id", "Name");
             return View();
         }
 
-        // POST: Tasks/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Time,Deadline,IsDone,ProjectId")] Core.Entity.Task task)
         {
-              _context.Add(task);
-              
-              await _context.SaveChangesAsync();
-              return RedirectToAction(nameof(Index));
+            _taskService.Add(task);
+             return RedirectToAction(nameof(Index));
         }
         
         public async Task<IActionResult> Edit(int? id)
@@ -121,8 +108,7 @@ namespace TodoApp.Controllers
             {
                 try
                 {
-                    _context.Update(task);
-                    await _context.SaveChangesAsync();
+                    _taskService.Update(task);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -178,14 +164,7 @@ namespace TodoApp.Controllers
             {
                 return Problem("Entity set 'AppDbContext.Tasks'  is null.");
             }
-            var task = await _context.Tasks.FindAsync(id);
-            if (task != null)
-            {
-                
-                _context.Tasks.Remove(task);
-            }
-            
-            await _context.SaveChangesAsync();
+            _taskService.Delete(id);
             return RedirectToAction(nameof(Index));
         }
 

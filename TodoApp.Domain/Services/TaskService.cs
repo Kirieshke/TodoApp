@@ -12,50 +12,70 @@ namespace TodoApp.Core.Services
     public class TaskService: ITaskService
     {
         private readonly AppDbContext _appDbContext;
+        private readonly DateTime date = DateTime.Today;
         public TaskService(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
             
-        public Task<Entity.Task> Add(Entity.Task task)
+        public void Add(Entity.Task task)
         {
-            throw new NotImplementedException();
+            _appDbContext.Add(task);
+            _appDbContext.SaveChangesAsync();
+            
         }
 
-        public Task<Entity.Task> Delete(int? id)
+        public void Delete(int? id)
         {
-            throw new NotImplementedException();
-        }
+            var task = _appDbContext.Tasks.FindAsync(id);
+            if (task != null)
+            {
+                _appDbContext.Remove(task);
+            }
 
-        public Task<Entity.Task> Details(int? id)
+            _appDbContext.SaveChangesAsync();
+
+        }
+       
+        public List<Entity.Task> Details(int? id)
         {
             throw new NotImplementedException();
         }
 
         public List<Entity.Task> GetTasks(int id)
         {
-            var appDbContext = _appDbContext.Tasks.Include(p => p.Project).Where(p => p.ProjectId == id);
-            return appDbContext.ToList();
+            var tasks = _appDbContext.Tasks.Include(p => p.Project).Where(p => p.ProjectId == id);
+            return tasks.ToList();
         }
 
-        public Task<Entity.Task> GetTodayTasks()
+        public List<Entity.Task> GetTodayTasks()
         {
-            throw new NotImplementedException();
+            var tasks = _appDbContext.Tasks.Include(t => t.Project).Where(p => p.Deadline.Date == date);
+            return tasks.ToList();
         }
 
-        public Task<Entity.Task> GetUpcomingTasks()
+        public List<Entity.Task> GetUpcomingTasks()
         {
-            throw new NotImplementedException();
+            var task = _appDbContext.Tasks.Include(t => t.Project).Where(p => p.Deadline.Date >= date);
+            return task.ToList();
         }
 
         public List<Entity.Task> Search(string searchString)
         {
-            throw new NotImplementedException();
+            var task = from m in _appDbContext.Tasks
+                       select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                task = task.Where(s => s.Name!.Contains(searchString));
+            }
+            return task.ToList();
         }
 
-        public Task<Entity.Task> Update(Entity.Task task)
+        public void Update(Entity.Task task)
         {
-            throw new NotImplementedException();
+            _appDbContext.Update(task);
+            _appDbContext.SaveChangesAsync();
         }
     }
 }
